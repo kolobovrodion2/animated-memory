@@ -1,0 +1,13 @@
+struct UsingCustomViewBuilder: View {
+    
+   @State private var condition = true
+    
+    var body: some View {
+        CustomViewBuilder {
+            text
+        }
+    }
+    
+    @ViewBuilder private var text: some View {
+        if condition {
+            Text("1")
